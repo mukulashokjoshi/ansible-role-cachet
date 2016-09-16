@@ -1,2 +1,31 @@
 ---
-# defaults file for ansible-role-cachet
+cachet_install_dir: /var/www/
+cachet_branch_version: v2.3.10
+cachet_update_from_git: false
+cachet_user: cachet
+cachet_group: cachet
+
+
+cachet_app_env: production
+cachet_app_debug: false
+cachet_app_url: http://status.example.com
+cachet_app_key: gkn09234r50hnsokdfnslkdtj92345dv90234roinjvd
+
+cachet_db_driver: mysql
+cachet_db_host: localhost
+cachet_db_database: cachet
+cachet_db_username: cachet 
+cachet_db_password: b1gStup1dP4wssw0rdYouN33dT0Chn4g3dud3
+cachet_db_port: 3306
+
+cachet_cache_driver: apc
+cachet_session_driver: apc
+cachet_queue_driver: database
+cachet_cachet_emoji: false
+
+cachet_redis_host: null
+cachet_redis_database: null
+cachet_redis_port: null
+
+cachet_github_token: null
+

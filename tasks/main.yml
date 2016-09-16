@@ -1,2 +1,25 @@
 ---
-# tasks file for ansible-role-cachet
+- name: Ensure git is installed
+  pkg:
+    name: git
+    state: present
+
+- name: Pull down git repository
+  git:
+    repo: https://github.com/cachethq/Cachet.git
+    dest: "{{ cachet_install_dir }}"
+    version: "{{ cachet_branch_version }}"
+    update: "{{ cachet_update_from_git }}"
+
+- name: Add symlink to project for easier vhosting
+  shell: "cd {{ cachet_install_dir }} && ln -s Cachet htdocs"
+
+
+- name: Build Cachet config template
+  template:
+    src: dotenv.j2
+    dest: "{{ cachet_install_dir }}/Cachet/.env"
+    owner: "{{ cachet_user }}"
+    group: "{{ cachet_group }}"
+
+

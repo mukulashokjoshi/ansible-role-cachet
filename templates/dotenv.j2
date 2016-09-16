@@ -1,0 +1,31 @@
+APP_ENV={{ cachet_app_env | default('production') | lower }}
+APP_DEBUG={{ cachet_app_debug | lower }}
+APP_URL={{ cachet_app_url }}
+APP_KEY={{ cachet_app_key }}
+
+DB_DRIVER={{ cachet_db_driver | default('mysql') | lower }}
+DB_HOST={{ cachet_db_host | default('localhost') | lower }}
+DB_DATABASE={{ cachet_db_database | default('cachet') }}
+DB_USERNAME={{ cachet_db_username | default('cachet') }}
+DB_PASSWORD={{ cachet_db_password }}
+DB_PORT={{ cachet_db_port | default('3306') }}
+
+CACHE_DRIVER={{ cachet_cache_driver | default('apc') }}
+SESSION_DRIVER={{ cachet_session_driver | default('apc') }}
+QUEUE_DRIVER={{ cachet_queue_driver | default('database') }}
+CACHET_EMOJI={{ cachet_cachet_emoji | default('false') | lower }}
+
+MAIL_DRIVER=smtp
+MAIL_HOST=mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ADDRESS=null
+MAIL_NAME="Demo Status Page"
+MAIL_ENCRYPTION=tls
+
+REDIS_HOST={{ cachet_redis_host | default('null') }}
+REDIS_DATABASE={{ cachet_redis_database | default('null') }}
+REDIS_PORT={{ cachet_redis_port | default('null') }}
+
+GITHUB_TOKEN={{ cachet_github_token | default('null') }}
