@@ -22,7 +22,6 @@ galaxy_info:
     - alerting
 
 dependencies:
-  - geerlingguy.php
-  - geerlingguy.composer
-  - pgporada.httpd
-  - geerlingguy.mysql
+  - { role: 'git+https://github.com/geerlingguy/ansible-role-php.git,v3.3.3'}
+  - { role: 'git+https://github.com/geerlingguy/ansible-role-composer.git,v1.5.0'}
+  - { role: 'git+https://github.com/ANXS/postgresql.git,v1.5.0'}
