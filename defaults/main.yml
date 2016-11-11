@@ -11,7 +11,7 @@ cachet_app_debug: false
 cachet_app_url: http://status.example.com
 cachet_app_key: gkn09234r50hnsokdfnslkdtj92345dv90234roinjvd
 
-cachet_db_driver: mysql
+cachet_db_driver: postgresql
 cachet_db_host: localhost
 cachet_db_database: cachet
 cachet_db_username: cachet 
@@ -28,4 +28,3 @@ cachet_redis_database: null
 cachet_redis_port: null
 
 cachet_github_token: null
-
